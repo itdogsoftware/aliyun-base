@@ -3,7 +3,7 @@ FROM debian:bullseye
 LABEL authors = "Roy To <roy.to@itdogsoftware.co>"
 
 # Install library & necessary service
-RUN apt-get update -y && apt-get install zip curl gpg openssh-client docker.io -y && rm -rf /var/lib/apt/lists/*
+RUN apt-get update -y && apt-get install zip jq curl gpg openssh-client docker.io -y && rm -rf /var/lib/apt/lists/*
 # add docker-compose plugin
 RUN curl -SL "https://github.com/docker/compose/releases/download/v2.30.3/docker-compose-linux-x86_64" -o /usr/local/bin/docker-compose && chmod +x /usr/local/bin/docker-compose
 # Add nvm default node 18
